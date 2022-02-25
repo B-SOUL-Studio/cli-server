@@ -1,0 +1,57 @@
+{
+  "name": "cli-server",
+  "version": "1.0.1",
+  "description": "",
+  "private": false,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "@cloudbase/node-sdk": "^2.7.1",
+    "@pick-star/cli-mongodb": "^1.0.3",
+    "cz-customizable": "^6.3.0",
+    "egg": "^2.15.1",
+    "egg-scripts": "^2.11.0"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-der-cli-server-dev",
+    "stop": "egg-scripts stop --title=egg-server-der-cli-server-dev",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod",
+    "c": "git add . && git cz",
+    "cp": "git add . && git cz && git push --follow-tags",
+    "build": "yarn test"
+  },
+  "ci": {
+    "version": "10"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "GPL",
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  }
+}
