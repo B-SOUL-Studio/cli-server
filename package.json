@@ -37,7 +37,7 @@
     "ci": "npm run lint && npm run cov",
     "autod": "autod",
     "c": "git add . && git cz",
-    "cp": "git add . && git cz && git push --follow-tags",
+    "cp": "git add . && git cz && der go -re",
     "build": "yarn test"
   },
   "ci": {
